@@ -1,0 +1,12 @@
+version: 1
+automations:
+  - name: "Setup Flutter Environment"
+    trigger: "onStart"
+    script: |
+      echo "🛠 Setting up Flutter..."
+      flutter doctor
+
+  - name: "Post Build Actions"
+    trigger: "onBuildSuccess"
+    script: |
+      echo "✅ Build complete for project: Share"
